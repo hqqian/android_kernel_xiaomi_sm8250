@@ -16,7 +16,7 @@
 #include <linux/slab.h>
 #include <linux/zstd.h>
 #define ZSTD_CStreamWorkspaceBound(cp) zstd_cstream_workspace_bound(&(cp))
-#define ZSTD_DStreamWorkspaceBound()   zstd_dstream_workspace_bound()
+#define ZSTD_DStreamWorkspaceBound(maxsz)  zstd_dstream_workspace_bound(maxsz)
 #include "compression.h"
 
 #define ZSTD_BTRFS_MAX_WINDOWLOG 17
