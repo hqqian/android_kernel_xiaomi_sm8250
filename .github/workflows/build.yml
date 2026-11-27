@@ -98,16 +98,16 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/zyc-clang
-          key: zyc-clang-16.0.6-20260510
+          key: zyc-clang-16.0.6-20260807
 
       - name: Setup zyc-clang 16 Toolchain
         if: steps.cache-clang.outputs.cache-hit != 'true'
         run: |
           mkdir -p $HOME/zyc-clang
           cd $HOME/zyc-clang
-          wget -q https://github.com/ZyCromerZ/Clang/releases/download/16.0.6-20260510-release/Clang-16.0.6-20260510.tar.gz
-          tar -zxvf Clang-16.0.6-20260510.tar.gz
-          rm Clang-16.0.6-20260510.tar.gz
+          wget -q https://github.com/ZyCromerZ/Clang/releases/download/16.0.6-20260807-release/Clang-16.0.6-20260807.tar.gz
+          tar -zxvf Clang-16.0.6-20260807.tar.gz
+          rm Clang-16.0.6-20260807.tar.gz
 
       - name: Cache ccache
         uses: actions/cache@v4
